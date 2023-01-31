@@ -4,7 +4,7 @@
       "nombre": "Tomás",
       "apellido": "Haydukiewicz",
       "domicilio": "",
-      "edad": 43,
+      "edad": 25,
       "dni": "",
       "telefono": "",
       "diagnostico": "",
@@ -14,49 +14,43 @@
       "observaciones": "",
       "session": [
         {
-          "date": "2023-01-25",
+          "date": "2023-01-31",
+          "isChecked": false,
+          "payment": "",
+          "id": "u6mkzvajq8kldkkw0bq"
+        },
+        {
+          "date": "2023-01-31",
           "isChecked": true,
-          "payment": "mp",
-          "id": "i94t06wdfjldjjefyh"
+          "payment": "Mercado Pago",
+          "id": "si7hotfzfjldkkuj6f"
+        },
+        {
+          "date": "2023-01-31",
+          "isChecked": true,
+          "payment": "Transferencia",
+          "id": "xevrbh44q6bldklsu4n"
+        },
+        {
+          "date": "2023-01-24",
+          "isChecked": false,
+          "payment": "",
+          "id": "vuethnjyf9rldkeq0au"
+        },
+        {
+          "date": "2023-01-24",
+          "isChecked": true,
+          "payment": "cuenta DNI",
+          "id": "qzhi960cgplldklpedx"
         }
       ],
-      "id": 2
-    },
-    {
-      "nombre": "Tomás",
-      "apellido": "Haydukiewicz",
-      "domicilio": "99",
-      "edad": 99,
-      "dni": "",
-      "telefono": "",
-      "diagnostico": "",
-      "obraSocial": "",
-      "derivacion": "",
-      "tratamientoComplementario": "",
-      "observaciones": "",
-      "session": [],
-      "id": 3
-    },
-    {
-      "nombre": "Tomás",
-      "apellido": "Haydukiewicz",
-      "domicilio": "",
-      "edad": 77,
-      "dni": "",
-      "telefono": "",
-      "diagnostico": "",
-      "obraSocial": "",
-      "derivacion": "",
-      "tratamientoComplementario": "",
-      "observaciones": "",
-      "session": [],
-      "id": 4
+      "id": 1
     },
     {
       "nombre": "Carlos",
       "apellido": "Andalucia",
       "domicilio": "",
-      "edad": 56,
+      "edad": 64,
       "dni": "",
       "telefono": "",
       "diagnostico": "",
@@ -64,21 +58,8 @@
       "derivacion": "",
       "tratamientoComplementario": "",
       "observaciones": "",
-      "id": 7
-    },
-    {
-      "nombre": "Tomás",
-      "apellido": "Haydukiewicz",
-      "domicilio": "Sanchez de Loria 155",
-      "edad": 25,
-      "dni": 40769558,
-      "telefono": "2915550492",
-      "diagnostico": "Trastorno de atencion",
-      "obraSocial": "Accord Salud",
-      "derivacion": "nadie",
-      "tratamientoComplementario": "fonoaudiologia",
-      "observaciones": "",
-      "id": 8
+      "session": [],
+      "id": 2
     }
   ],
   "comments": [

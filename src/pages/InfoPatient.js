@@ -18,7 +18,7 @@ const InfoPatient = () => {
         <p>Datos del paciente:</p>
       </div>
 
-      <div className="mx-8 my-4 bg-yellow-100 p-2 rounded-lg">
+      <div className="mx-8 my-4 bg-orange-100 p-2 rounded-lg">
         <p className="text-lg">
           <span className="font-semibold underline text-xl mr-4">
             Nombre:

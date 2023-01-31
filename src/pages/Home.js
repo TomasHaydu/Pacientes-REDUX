@@ -22,7 +22,6 @@ const Home = () => {
 
     if (confirmed) {
       try {
-        console.log(patient);
         dispatch(deleteToAPI(patient));
       } catch (error) {
         console.log(error);
@@ -81,12 +80,19 @@ const Home = () => {
         <div>
           <label className="font-mono text-2xl uppercase mx-2">
             Buscador:
-          </label>
+          
           <input
             type="text"
+            list="patients"
             onChange={(e) => dispatch(onChangeSearch(e.target.value))}
             className="p-2 rounded-xl w-96"
           />
+          </label>
+          <datalist id="patients">
+            {patients.map((patient) => 
+            <option value={patient.nombre + " " + patient.apellido}></option>
+            )}
+          </datalist>
         </div>
         <div>
           <label className="font-mono text-1xl mr-2"

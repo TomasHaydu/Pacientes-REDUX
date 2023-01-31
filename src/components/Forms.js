@@ -12,7 +12,7 @@ const Forms = ({ patient }) => {
 
   const [resultArrived, setResultArrived] = useState(false);
 
-  
+  const [session, setSession] = useState([])
 
   const newPatientSchema = Yup.object().shape({
     nombre: Yup.string()
@@ -72,7 +72,8 @@ const Forms = ({ patient }) => {
             derivacion: patient?.derivacion ?? "",
             tratamientoComplementario: patient?.tratamientoComplementario ?? "",
             observaciones: patient?.observaciones ?? "",
-            id: patient.id
+            id: patient.id,
+            session: patient?.session ?? [],
           }}
           enableReinitialize={true}
           onSubmit={async (valores , { resetForm }) => {
@@ -218,6 +219,16 @@ const Forms = ({ patient }) => {
                     id="observaciones"
                     name="observaciones"
                     className="bg-slate-50 rounded-lg w-3/4 h-24 border-2 hover:bg-slate-100 p-1"
+                  />
+                </div>
+
+                <div
+                className="hidden"
+                >
+                  <Field 
+                  type="text"
+                  id="session"
+                  name="session"
                   />
                 </div>
 

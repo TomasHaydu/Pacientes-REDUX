@@ -161,5 +161,9 @@ export const insertPatientSession = (patient) => (dispatch) => {
     .put(`http://localhost:4000/posts/${patient.id}`, patient )
     .catch((error) => console.log(error))
 
+    patient.session.sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
+
     dispatch(editPatients(patient))
 }
