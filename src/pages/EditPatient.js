@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+/* eslint-disable eqeqeq */
+
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Forms from "../components/Forms";

@@ -156,14 +156,10 @@ export const patientsOrder = (order) => (dispatch) => {
   dispatch(setPatientsList(order));
 };
 
-export const insertPatientSession = (thisSession, patient) => (dispatch) => {
-    const copyPatient = {...patient}
+export const insertPatientSession = (patient) => (dispatch) => {
+   axios
+    .put(`http://localhost:4000/posts/${patient.id}`, patient )
+    .catch((error) => console.log(error))
 
-    console.log(copyPatient.session.push({"hola":2}))
-
-  
-
-  // axios
-  // .put(`http://localhost:4000/posts/${patient.id}`, )
-  // .catch((error) => console.log(error))
+    dispatch(editPatients(patient))
 }

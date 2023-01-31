@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import SessionPayment from "../components/SessionPayment";
@@ -7,8 +9,9 @@ const InfoPatient = () => {
   const { id } = useParams();
 
   const patients = useSelector((state) => (state.patients.patients))
-  const patient = patients.find(async patient => await patient.id === id)
 
+  const patient = patients.find(patient => patient.id == id)
+ 
   return (
     <div className="">
       <div className="flex justify-center font-bold text-4xl mt-4">

@@ -1,16 +1,12 @@
 import { useState } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { insertPatientSession } from "../features/patient/patientSlice";
 
-const SessionPayment = ({patient}) => {
-
-
+const SessionPayment = ({ patient }) => {
   const dispatch = useDispatch();
 
   const [date, setDate] = useState("");
-  const [check, setCheck] = useState(true);
   const [payment, setPayment] = useState("");
-
   const [isChecked, setIsChecked] = useState(false);
 
   const idGenerator = () => {
@@ -24,14 +20,18 @@ const SessionPayment = ({patient}) => {
 
     const id = idGenerator();
 
-    const thisSession = {
+    let thisSession = {
       date,
-      check,
+      isChecked,
       payment,
       id,
     };
 
-    dispatch(insertPatientSession(thisSession, patient));
+    let patientMut = {...patient}
+    patientMut.session = [...patientMut.session]
+    patientMut.session.push(thisSession)
+
+    dispatch(insertPatientSession(patientMut));
   };
 
   const handleSubmit = (e) => {
@@ -39,12 +39,12 @@ const SessionPayment = ({patient}) => {
 
     newSession();
 
-    setDate("");
-    setCheck(true);
+    setDate("2023-01-31");
+    setIsChecked(false);
     setPayment("");
   };
 
-  const handleEdit = () => {};
+  const handleEdit = () => { };
 
   return (
     <div className="bg-fuchsia-100 rounded-lg mx-8 my-4">
@@ -58,7 +58,11 @@ const SessionPayment = ({patient}) => {
             type="date"
             required
             className="hover:bg-slate-100 ml-4 p-0.5 my-1 border-2  border-zinc-300"
-            onChange={(e) => setDate(e.target.value)}
+            onChange={(e) => {
+              console.log(e.target.value)
+              setDate(e.target.value)
+            }}
+            value={date}
           />
         </div>
         <div>
@@ -69,7 +73,6 @@ const SessionPayment = ({patient}) => {
             checked={isChecked}
             onChange={(e) => {
               setIsChecked(!isChecked);
-              setCheck(e.target.checked);
             }}
           />
         </div>
@@ -79,6 +82,7 @@ const SessionPayment = ({patient}) => {
             type="text"
             className="hover:bg-slate-100 ml-4 w-2/5 my-1 border-2 p-1 border-zinc-300"
             onChange={(e) => setPayment(e.target.value)}
+            value={payment}
           />
         </div>
 
