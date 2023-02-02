@@ -18,7 +18,7 @@ const InfoPatient = () => {
         <p>Datos del paciente:</p>
       </div>
 
-      <div className="mx-8 my-4 bg-orange-100 p-2 rounded-lg">
+      <div className="mx-8 my-4 bg-orange-100 md:w-11/12 p-2 rounded-lg">
         <p className="text-lg">
           <span className="font-semibold underline text-xl mr-4">
             Nombre:
@@ -94,7 +94,7 @@ const InfoPatient = () => {
         </p>
   
         <p 
-        className="flex md:flex-row break-words flex-col text-lg mt-4 w-11/12 overflow-y-auto h-32 max-h-40 max-w-md">
+        className="flex md:flex-row md:break-keep break-words flex-col text-lg mt-4 w-11/12 overflow-y-auto md:h-16 h-32">
           <span className="font-semibold underline text-xl mr-4">
             Observaciones:
           </span>

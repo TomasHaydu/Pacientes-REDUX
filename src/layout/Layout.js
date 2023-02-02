@@ -11,7 +11,7 @@ const layout = () => {
 
   return (
     <div className="flex flex-col md:flex-row bg-orange-100">
-      <div className="bg-orange-400 md:w-1/6 w-screen md:h-screen inline-block md:border-r-2 md:rounded-r-3xl p-4">
+      <div className="bg-orange-400 md:w-36 w-screen md:h-screen inline-block md:border-r-2 md:rounded-r-3xl p-4">
           <Link 
           className="flex justify-center items-center"
           to="/"
@@ -54,7 +54,7 @@ const layout = () => {
         </div>
       </div>
 
-      <div className="bg-orange-50 w-full md:mx-8 my-8 rounded-lg">
+      <div className="bg-orange-50 md:w-10/12 w-full md:mx-8 my-8 rounded-lg">
         <Outlet />
       </div>
     </div>

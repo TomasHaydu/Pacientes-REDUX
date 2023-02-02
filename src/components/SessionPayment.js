@@ -144,7 +144,7 @@ const SessionPayment = ({ patient }) => {
   };
 
   return (
-    <div className="bg-orange-300 rounded-lg mx-8 mt-4 mb-10">
+    <div className="bg-orange-300 md:w-11/12 rounded-lg mx-8 mt-4 mb-10">
       <form
         onSubmit={(e) => handleSubmit(e)}
         className="flex-col mx-2 md:mx-20 my-4 text-lg"
@@ -186,7 +186,7 @@ const SessionPayment = ({ patient }) => {
 
         <input
           type="submit"
-          className="bg-green-200 hover:bg-green-300 p-1 rounded-lg w-40 mx-14 md:mx-80"
+          className="bg-green-200 hover:bg-green-300 p-1 rounded-lg w-40 mx-14 md:mx-80 cursor-pointer"
           value={edit ? "Editar" : "Añadir"}
         />
       </form>
@@ -260,7 +260,7 @@ const SessionPayment = ({ patient }) => {
               </div>
             ))
           ) : (
-            <p>"No se han encontrado sesiones en el historial"</p>
+            null
           )}
         </div>
       </div>

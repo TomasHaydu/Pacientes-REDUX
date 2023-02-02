@@ -13,7 +13,14 @@
       "tratamientoComplementario": "",
       "observaciones": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "id": 2,
-      "session": []
+      "session": [
+        {
+          "date": "2023-02-02",
+          "isChecked": false,
+          "payment": "",
+          "id": "sb9814deng9ldnlwyjr"
+        }
+      ]
     },
     {
       "nombre": "Tomás",
