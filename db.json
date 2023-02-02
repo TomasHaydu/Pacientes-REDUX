@@ -11,9 +11,9 @@
       "obraSocial": "",
       "derivacion": "",
       "tratamientoComplementario": "",
-      "observaciones": "",
-      "session": [],
-      "id": 2
+      "observaciones": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "id": 2,
+      "session": []
     },
     {
       "nombre": "Tomás",
@@ -27,7 +27,20 @@
       "derivacion": "nadie",
       "tratamientoComplementario": "acompañamiento-terapeutico",
       "observaciones": "asdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd",
-      "session": [],
+      "session": [
+        {
+          "date": "2023-02-09",
+          "isChecked": true,
+          "payment": "asd",
+          "id": "ftwix72poo4ldnk06te"
+        },
+        {
+          "date": "2023-02-02",
+          "isChecked": false,
+          "payment": "",
+          "id": "ubl3wcpkguldnka9c8"
+        }
+      ],
       "id": 3
     },
     {

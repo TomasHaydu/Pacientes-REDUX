@@ -85,16 +85,16 @@ const InfoPatient = () => {
 
         <p className="text-lg mt-4">
          
-          <span className="font-semibold underline text-xl mr-4">
+          <span className="font-semibold break-words overflow-y-auto underline text-xl mr-4">
             Tratamiento Complementario:
           </span>
           {patient.tratamientoComplementario === ""
             ? "-"
             : patient.tratamientoComplementario}
         </p>
-
-        <p className="text-lg mt-4 overflow-auto">
-         
+  
+        <p 
+        className="flex md:flex-row break-words flex-col text-lg mt-4 w-11/12 overflow-y-auto h-32 max-h-40 max-w-md">
           <span className="font-semibold underline text-xl mr-4">
             Observaciones:
           </span>

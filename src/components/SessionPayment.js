@@ -58,9 +58,9 @@ const SessionPayment = ({ patient }) => {
       const patientMut = { ...patient };
       patientMut.session = [...patientMut.session];
       patientMut.session = patientMut.session.filter((s) => s.id !== sessionId);
-      patientMut.session.push(thisSession)
+      patientMut.session.push(thisSession);
 
-      dispatch(editToAPI(patientMut))
+      dispatch(editToAPI(patientMut));
 
       setEdit(false);
     }
@@ -87,7 +87,9 @@ const SessionPayment = ({ patient }) => {
     if (response) {
       const patientMut = { ...patient };
       patientMut.session = [...patientMut.session];
-      patientMut.session = patientMut.session.filter((s) => s.id !== sessionToDelete.id);
+      patientMut.session = patientMut.session.filter(
+        (s) => s.id !== sessionToDelete.id
+      );
       dispatch(insertPatientSession(patientMut));
     }
   };
@@ -142,10 +144,10 @@ const SessionPayment = ({ patient }) => {
   };
 
   return (
-    <div className="bg-orange-300 rounded-lg mx-8 my-4">
+    <div className="bg-orange-300 rounded-lg mx-8 mt-4 mb-10">
       <form
         onSubmit={(e) => handleSubmit(e)}
-        className="flex-col mx-20 my-4 text-lg"
+        className="flex-col mx-2 md:mx-20 my-4 text-lg"
       >
         <div>
           <label className="font-bold">Fecha de la sesion:</label>
@@ -178,41 +180,43 @@ const SessionPayment = ({ patient }) => {
             onChange={(e) => setPayment(e.target.value)}
             value={payment}
             maxLength={18}
-            disabled={isChecked ? false : true }
+            disabled={isChecked ? false : true}
           />
         </div>
 
         <input
           type="submit"
-          className="bg-green-200 hover:bg-green-300 p-1 rounded-lg w-40 mx-80"
+          className="bg-green-200 hover:bg-green-300 p-1 rounded-lg w-40 mx-14 md:mx-80"
           value={edit ? "Editar" : "Añadir"}
         />
       </form>
-      <div className="inline-block w-full">
-        <div className="flex justify-between my-2">
-          <label className="mx-20 font-bold text-lg ">
-            Historial de Sesiones:
-          </label>
-          <select
-            className="w-28 p-3 rounded-lg text-xs mr-28"
-            onChange={(e) => handleSelect(e.target.value)}
-          >
-            <option value="" disabled>
-              -Ordernar por-
-            </option>
-            <option value="date">Fecha</option>
-            <option value="payment">Pagado</option>
-          </select>
+      <div className="mx-2 md:mx-0 flex flex-col md:inline-block md:w-full">
+        <div className="flex md:flex-row flex-col justify-between my-2 mx-20">
+          <div>
+            <label className="font-bold text-lg">Historial de Sesiones:</label>
+          </div>
+          <div>
+            <select
+              className="w-28 p-3 rounded-lg text-xs "
+              onChange={(e) => handleSelect(e.target.value)}
+            >
+              <option value="" disabled>
+                -Ordernar por-
+              </option>
+              <option value="date">Fecha</option>
+              <option value="payment">Pagado</option>
+            </select>
+          </div>
         </div>
 
-        <div className="mb-2 bg-orange-100 rounded-md ml-20 p-4 w-10/12 max-h-40 overflow-y-scroll border-2 border-zinc-300">
+        <div className="md:mb-2 flex flex-col md:block bg-orange-100 rounded-md md:ml-20 p-4 w-full md:w-10/12 max-h-48 md:max-h-40 overflow-y-scroll border-2 border-zinc-300">
           {patient.session ? (
             patient.session.map((s) => (
               <div
-                className="flex flex-row justify-between my-2 rounded-md border-gray-300 border-2"
+                className="flex flex-col md:flex-row justify-between my-2 rounded-md border-gray-300 border-2"
                 key={s.id}
               >
-                <ul className="flex flex-row justify-start items-center">
+                <ul className="flex flex-col md:flex-row justify-start items-center">
                   <li className="ml-2 my-2 bg-orange-700 rounded-full w-4 h-2"></li>
                   <label className="mx-2 underline font-bold">Fecha:</label>
                   <li className="">
@@ -239,7 +243,7 @@ const SessionPayment = ({ patient }) => {
                   <li className="">{s.payment === "" ? "-" : s.payment}</li>
                 </ul>
 
-                <div>
+                <div className="flex justify-center md:block">
                   <button
                     className="bg-sky-400 hover:bg-sky-500 rounded-md h-6 w-16 mx-2 my-1"
                     onClick={() => handleEdit(s)}
