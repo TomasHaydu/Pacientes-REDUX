@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { info } from "autoprefixer";
 import axios from "axios";
 
 const initialState = {
@@ -99,8 +100,8 @@ export const deleteToAPI = (patient) => (dispatch) => {
     .catch((error) => console.log(error));
 };
 
-const filtrarElementos = (terminoBusqueda, tareasPorMostrar) => {
-  const resultadosBusqueda = tareasPorMostrar.filter((patients) => {
+const filtrarElementos = (termOfSearch, patientsToShow) => {
+  const resultadosBusqueda = patientsToShow.filter((patients) => {
     const nombre = patients.nombre
       .toString()
       .toLowerCase()
@@ -111,9 +112,17 @@ const filtrarElementos = (terminoBusqueda, tareasPorMostrar) => {
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
-    if (nombre.includes(terminoBusqueda.toLowerCase())) {
+    if((nombre + " " + apellido).includes(termOfSearch.toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""))){
       return patients;
-    } else if (apellido.includes(terminoBusqueda.toLowerCase())) {
+    } else if (nombre.includes(termOfSearch.toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""))) {
+      return patients;
+    } else if (apellido.includes(termOfSearch.toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""))) {
       return patients;
     } else return null;
   });
@@ -133,17 +142,18 @@ export const fetchInfoProfile = () => (dispatch) => {
   axios
     .get("http://localhost:4000/comments")
     .then((response) => {
-      dispatch(setImage(response.data.image))
-      dispatch(setName(response.data.name))
+      dispatch(setImage([response.data.image]))
+      dispatch(setName([response.data.name]))
     })
     .catch((error) => console.log(error));
 };
 
 export const newInfoProfile = (titleName, img) => (dispatch) => {
+  const info = {"name": titleName ,
+  "image": img}
   axios
     .put("http://localhost:4000/comments", 
-      {"name": titleName ,
-      "image": img})
+      info)
     .then((response) => {
       console.log(response.data)
       dispatch(setImage(img))

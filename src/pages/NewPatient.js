@@ -12,7 +12,7 @@ const NewPatient = () => {
         Agregar nuevo paciente
         </h2>
         <p
-        className="font-serif text-base flex justify-center"
+        className="font-serif text-base flex text-center my-2 justify-center"
         > Complete el formulario para poder agregar un nuevo paciente
         </p>
       </div>

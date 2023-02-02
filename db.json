@@ -1,52 +1,6 @@
 {
   "posts": [
     {
-      "nombre": "Tomás",
-      "apellido": "Haydukiewicz",
-      "domicilio": "",
-      "edad": 25,
-      "dni": "",
-      "telefono": "",
-      "diagnostico": "",
-      "obraSocial": "",
-      "derivacion": "",
-      "tratamientoComplementario": "",
-      "observaciones": "",
-      "session": [
-        {
-          "date": "2023-01-31",
-          "isChecked": false,
-          "payment": "",
-          "id": "u6mkzvajq8kldkkw0bq"
-        },
-        {
-          "date": "2023-01-31",
-          "isChecked": true,
-          "payment": "Mercado Pago",
-          "id": "si7hotfzfjldkkuj6f"
-        },
-        {
-          "date": "2023-01-31",
-          "isChecked": true,
-          "payment": "Transferencia",
-          "id": "xevrbh44q6bldklsu4n"
-        },
-        {
-          "date": "2023-01-24",
-          "isChecked": false,
-          "payment": "",
-          "id": "vuethnjyf9rldkeq0au"
-        },
-        {
-          "date": "2023-01-24",
-          "isChecked": true,
-          "payment": "cuenta DNI",
-          "id": "qzhi960cgplldklpedx"
-        }
-      ],
-      "id": 1
-    },
-    {
       "nombre": "Carlos",
       "apellido": "Andalucia",
       "domicilio": "",
@@ -60,6 +14,36 @@
       "observaciones": "",
       "session": [],
       "id": 2
+    },
+    {
+      "nombre": "Tomás",
+      "apellido": "Haydukiewicz",
+      "domicilio": "Sanchez de Loria 155",
+      "edad": 25,
+      "dni": 40769558,
+      "telefono": "2915039585",
+      "diagnostico": "Trastorno de atencion",
+      "obraSocial": "Accord Salud",
+      "derivacion": "nadie",
+      "tratamientoComplementario": "acompañamiento-terapeutico",
+      "observaciones": "asdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd",
+      "session": [],
+      "id": 3
+    },
+    {
+      "nombre": "Luisina",
+      "apellido": "Darthes",
+      "domicilio": "",
+      "edad": 26,
+      "dni": "",
+      "telefono": "",
+      "diagnostico": "",
+      "obraSocial": "",
+      "derivacion": "",
+      "tratamientoComplementario": "",
+      "observaciones": "",
+      "session": [],
+      "id": 4
     }
   ],
   "comments": [

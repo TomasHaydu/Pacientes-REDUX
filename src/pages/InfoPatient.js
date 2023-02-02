@@ -13,7 +13,7 @@ const InfoPatient = () => {
   const patient = patients.find(patient => patient.id == id)
  
   return (
-    <div className="">
+    <div>
       <div className="flex justify-center font-bold text-4xl mt-4">
         <p>Datos del paciente:</p>
       </div>
@@ -68,7 +68,7 @@ const InfoPatient = () => {
           {patient.diagnostico === "" ? "-" : patient.diagnostico}
         </p>
 
-        <p className="text-lg mt-4">
+        <p className="text-lg mt-4 overflow-y-auto">
          
           <span className="font-semibold underline text-xl mr-4">
             Obra Social:
@@ -93,7 +93,7 @@ const InfoPatient = () => {
             : patient.tratamientoComplementario}
         </p>
 
-        <p className="text-lg mt-4">
+        <p className="text-lg mt-4 overflow-auto">
          
           <span className="font-semibold underline text-xl mr-4">
             Observaciones:

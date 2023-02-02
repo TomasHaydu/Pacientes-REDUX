@@ -77,28 +77,28 @@ const Home = () => {
   return (
     <div>
       <div className="mx-2 my-6 flex justify-between">
-        <div>
-          <label className="font-mono text-2xl uppercase mx-2">
+        <div className="md:block flex-col justify-center items-center">
+          <label className="font-mono md:text-2xl uppercase mx-2">
             Buscador:
           
           <input
             type="text"
             list="patients"
             onChange={(e) => dispatch(onChangeSearch(e.target.value))}
-            className="p-2 rounded-xl w-96"
+            className="p-2 rounded-xl w-full md:w-8/12"
           />
           </label>
           <datalist id="patients">
             {patients.map((patient) => 
-            <option value={patient.nombre + " " + patient.apellido}></option>
+            <option key={patient.id} value={patient.nombre + " " + patient.apellido}></option>
             )}
           </datalist>
         </div>
-        <div>
+        <div className="md:block flex-col justify-center items-center">
           <label className="font-mono text-1xl mr-2"
           > Ordernar por:</label>
           <select
-            className="w-20 md:w-32 p-3 rounded-lg text-xs mr-36"
+            className="w-3/5 md:w-32 p-3 rounded-lg text-xs mx-2 md:mr-36"
             onChange={(e) => handleSelect(e.target.value)}
           >
             <option value="" disabled>
@@ -111,11 +111,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="p-2 grid grid-cols-6 gap-16 bg-orange-500 rounded-sm mx-2 my-2">
+      <div className="md:p-2 grid grid-cols-5 md:grid-cols-6 gap-16 bg-orange-500 rounded-sm mx-2 my-2">
         <p className="ml-4">Nombre</p>
         <p>Apellido</p>
-        <p>Edad</p>
-        <p>Telefono</p>
+        <p className="hidden md:block">Edad</p>
+        <p className="hidden md:block">Telefono</p>
         <p className="col-span-2"></p>
       </div>
 
@@ -128,7 +128,7 @@ const Home = () => {
           />
         ))
       ) : (
-        <p className="text-lg mx-72 my-60">
+        <p className="text-lg md:mx-72 md:my-60">
           No existen pacientes aun. Vaya a "Nuevo Paciente" a su izquierda para
           agregar pacientes
         </p>

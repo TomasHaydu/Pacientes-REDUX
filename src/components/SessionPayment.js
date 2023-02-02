@@ -205,11 +205,11 @@ const SessionPayment = ({ patient }) => {
           </select>
         </div>
 
-        <div className="mb-2 bg-slate-50 rounded-md ml-20 p-4 w-10/12 max-h-40 overflow-y-scroll border-2 border-zinc-300">
+        <div className="mb-2 bg-orange-100 rounded-md ml-20 p-4 w-10/12 max-h-40 overflow-y-scroll border-2 border-zinc-300">
           {patient.session ? (
             patient.session.map((s) => (
               <div
-                className="flex flex-row justify-between my-2 border-gray-300 border-2"
+                className="flex flex-row justify-between my-2 rounded-md border-gray-300 border-2"
                 key={s.id}
               >
                 <ul className="flex flex-row justify-start items-center">

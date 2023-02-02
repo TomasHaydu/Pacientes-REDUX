@@ -198,7 +198,7 @@ const Forms = ({ patient }) => {
                     as="select"
                     id="tratamientoComplementario"
                     name="tratamientoComplementario"
-                    className="bg-slate-50 rounded-lg w-2/4 border-2 hover:bg-slate-100 p-1"
+                    className="bg-slate-50 rounded-lg w-3/4 md:w-2/4 border-2 hover:bg-slate-100 p-1"
                   >
                     <option value="">--Seleccione--</option>
                     <option value="psicopedagogia">Psicopedagogía</option>
@@ -212,7 +212,7 @@ const Forms = ({ patient }) => {
                   </Field>
                 </div>
 
-                <div className="mx-20 my-2 flex mb-2">
+                <div className="mx-20 my-2 md:flex-row flex-col justify-center items-center mb-2">
                   <label className="mr-4 uppercase ">Obsevaciones:</label>
                   <Field
                     as="textarea"
@@ -234,7 +234,9 @@ const Forms = ({ patient }) => {
 
                 <div className="flex justify-center">
                   <input
-                    className={patient.id ? "mb-5 bg-blue-400 hover:bg-blue-500 p-4 rounded-3xl w-1/5 font-bold text-lg" : "mb-5 bg-lime-400 hover:bg-lime-500 p-4 rounded-3xl w-1/5 font-bold text-lg"}
+                    className={patient.id ?
+                       "mb-10 md:mb-5 bg-blue-400 hover:bg-blue-500 p-4 rounded-3xl w-3/5 md:w-1/5 font-bold text-lg" 
+                       : "mb-10 md:mb-5 bg-lime-400 hover:bg-lime-500 p-4 rounded-3xl w-3/5 md:w-1/5 font-bold text-lg"}
                     value={patient.id ? "Editar" : "Agregar"}
                     type="submit"
                   ></input>
