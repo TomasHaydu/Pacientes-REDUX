@@ -181,7 +181,7 @@ const Forms = ({ patient }) => {
                 </div>
 
                 <div className="mx-20 my-2">
-                  <label className="mr-4 uppercase">Deriviación:</label>
+                  <label className="mr-4 uppercase">Derivación:</label>
                   <Field
                     type="text"
                     id="derivacion"
