@@ -64,6 +64,40 @@
       "observaciones": "",
       "session": [],
       "id": 4
+    },
+    {
+      "nombre": "Alejandro",
+      "apellido": "Aguero",
+      "domicilio": "La casa de Diego",
+      "edad": 29,
+      "dni": 37264598,
+      "telefono": "291558947",
+      "diagnostico": "Tarado mental",
+      "obraSocial": "Pindonga 2.0",
+      "derivacion": "Gustavo",
+      "tratamientoComplementario": "acompañamiento-terapeutico",
+      "observaciones": "Es bastante boludo... Que se yo... Pobre man",
+      "session": [
+        {
+          "date": "2023-02-09",
+          "isChecked": false,
+          "payment": "",
+          "id": "01el886i9iszldxm8o25"
+        },
+        {
+          "date": "2023-02-08",
+          "isChecked": false,
+          "payment": "",
+          "id": "ng4i2mxkfmcldxn0t2d"
+        },
+        {
+          "date": "2023-02-08",
+          "isChecked": true,
+          "payment": "Tu hermana",
+          "id": "jfvxjwa6pnnldxn1blj"
+        }
+      ],
+      "id": 5
     }
   ],
   "comments": [

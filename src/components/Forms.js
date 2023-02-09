@@ -12,6 +12,7 @@ const Forms = ({ patient }) => {
 
   const [resultArrived, setResultArrived] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const [session, setSession] = useState([])
 
   const newPatientSchema = Yup.object().shape({

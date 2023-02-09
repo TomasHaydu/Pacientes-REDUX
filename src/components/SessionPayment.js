@@ -48,12 +48,17 @@ const SessionPayment = ({ patient }) => {
 
     if (edit) {
       const id = sessionId;
+      
       let thisSession = {
         date,
         isChecked,
         payment,
         id,
       };
+
+      if(thisSession.isChecked == false) {
+       thisSession.payment = ""
+      }
 
       const patientMut = { ...patient };
       patientMut.session = [...patientMut.session];
@@ -76,8 +81,8 @@ const SessionPayment = ({ patient }) => {
     setEdit(true);
 
     setDate(session.date);
-    setIsChecked(session.isChecked);
-    setPayment(session.payment);
+    setIsChecked(session.isChecked)
+    setPayment(session.payment)
     setSessionId(session.id);
   };
 
@@ -178,7 +183,7 @@ const SessionPayment = ({ patient }) => {
             type="text"
             className="hover:bg-slate-100 ml-4 w-2/5 my-1 border-2 p-1 border-zinc-300"
             onChange={(e) => setPayment(e.target.value)}
-            value={payment}
+            value={!isChecked ? "" : payment}
             maxLength={18}
             disabled={isChecked ? false : true}
           />
@@ -220,7 +225,6 @@ const SessionPayment = ({ patient }) => {
                   <li className="ml-2 my-2 bg-orange-700 rounded-full w-4 h-2"></li>
                   <label className="mx-2 underline font-bold">Fecha:</label>
                   <li className="">
-                    {" "}
                     {dayMonthYear(s.date) === dayNow()
                       ? "HOY"
                       : dayMonthYear(s.date)}
