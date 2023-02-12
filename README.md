@@ -11,6 +11,7 @@ Un lugar donde llevar un registro de tus pacientes, su información y administra
 
 ## Librerías
 Las librerías extra que usé son:
+.React: https://es.reactjs.org
 .Tailwinds CSS: https://tailwindcss.com
 .Redux: https://es.redux.js.org
 .React router dom: https://reactrouter.com/en/main
