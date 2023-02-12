@@ -12,13 +12,13 @@ Un lugar donde llevar un registro de tus pacientes, su información y administra
 ## Librerías
 Las librerías extra que usé son:
 
--Tailwinds CSS: https://tailwindcss.com
--Redux: https://es.redux.js.org
--React router dom: https://reactrouter.com/en/main
--JSON-SERVER: https://www.npmjs.com/package/json-server
--Formik: https://formik.org
--Yup: https://www.npmjs.com/package/yup
--Axios: https://axios-http.com/docs/intro
+Tailwinds CSS: https://tailwindcss.com
+Redux: https://es.redux.js.org
+React router dom: https://reactrouter.com/en/main
+JSON-SERVER: https://www.npmjs.com/package/json-server
+Formik: https://formik.org
+Yup: https://www.npmjs.com/package/yup
+Axios: https://axios-http.com/docs/intro
 
 ## Instalación
 
