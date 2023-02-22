@@ -1,4 +1,4 @@
-# Pacientes Psico
+# Patients Psico
 
 Un lugar donde llevar un registro de tus pacientes, su información y administrar las sesiones que han tenido.
 
