@@ -1,16 +1,16 @@
-# Patients Psico
+# Patients-Psico
 
-Un lugar donde llevar un registro de tus pacientes, su información y administrar las sesiones que han tenido.
+A platform to keep track of your patients, their information and manage the sessions they have had.
 
-## Funcionalidades
-1. Agrega y edita pacientes con todos sus datos.
-2. Busca tus pacientes y ordenalos por el atributo que quieras.
-3. Mira toda su informacion detallada.
-4. Agrega tus sesiones con detalles de la fecha y el pago.
-5. Edita y elimina las sesiones que hayan tenido.
+## Functionality
+1. Add and edit patients with all their data.
+2. Search your patients and sort them by the attribute you want.
+3. View all their detailed information.
+4. Add your sessions with date and payment details.
+5. Edit and delete sessions.
 
-## Librerías
-Las librerías extra que usé son:
+## Libraries
+The extra libraries I used are:
 .React: https://es.reactjs.org
 .Tailwinds CSS: https://tailwindcss.com
 .Redux: https://es.redux.js.org
@@ -20,13 +20,13 @@ Las librerías extra que usé son:
 .Yup: https://www.npmjs.com/package/yup
 .Axios: https://axios-http.com/docs/intro
 
-## Instalación
+## Installation
 
 	git clone https://github.com/TomasHaydu/Pacientes-REDUX
 	npm i
 	json-server -p 4000 db.json
 	npm start
 
-## Preview del proyecto
+## Project preview
 
 ![pacientes psico foto](https://user-images.githubusercontent.com/103974880/218336309-7c77c204-eb71-4a2d-8943-5848e922625b.png)
