@@ -29,4 +29,7 @@ The extra libraries I used are:
 
 ## Project preview
 
-![pacientes psico foto](https://user-images.githubusercontent.com/103974880/218336309-7c77c204-eb71-4a2d-8943-5848e922625b.png)
+
+https://user-images.githubusercontent.com/103974880/226458515-f79fe3c9-7ad2-4953-8706-ac7bbb8ef9c3.mp4
+
+
