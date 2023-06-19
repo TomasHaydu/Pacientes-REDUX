@@ -1,4 +1,4 @@
-# Patients-Psico
+# Patients-Psico DEMO
 
 A platform to keep track of your patients, their information and manage the sessions they have had.
 
